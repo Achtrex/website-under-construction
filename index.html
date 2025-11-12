@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Achtrex | Empowering Digital Transformation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description"
+        content="Achtrex is a leading digital transformation agency. We build powerful websites, apps, and digital brands designed to scale globally. Bold Ideas. Global Impact. Fully operational while our new site is under construction." />
+    <meta name="keywords"
+        content="Achtrex, Digital Transformation, Product Development, UI/UX Design, SEO, System Integration, IT Consultation, Websites, Apps, Branding" />
+    <meta name="author" content="Achtrex" />
+    <link rel="canonical" href="https://www.achtrex.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.achtrex.com/" />
+    <meta property="og:title" content="Achtrex | Empowering Digital Transformation" />
+    <meta property="og:description"
+        content="We build powerful websites, apps, and digital brands designed to scale globally. Fully operational while our new site is under construction." />
+    <meta property="og:image" content="https://www.achtrex.com/img/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://www.achtrex.com/" />
+    <meta name="twitter:title" content="Achtrex: Empowering Digital Transformation" />
+    <meta name="twitter:description"
+        content="Bold Ideas. Global Impact. We're fully operational and ready to bring your digital vision to life. Start your project today!" />
+    <meta name="twitter:image" content="https://www.achtrex.com/img/logo.png" />
+    <link rel="icon" type="image/png" href="/img/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        :root {
+            --primary: #005AB0;
+            --primary-dark: #004080;
+            --dark-bg: #0a0a10;
+            --surface: #ffffff;
+            --text-primary: #1a1a24;
+            --text-secondary: #4a4a5e;
+            --text-muted: #8a8a9e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--dark-bg);
+            background-image:
+                linear-gradient(0deg,
+                    transparent 24%,
+                    rgba(255, 255, 255, 0.05) 25%,
+                    rgba(255, 255, 255, 0.05) 26%,
+                    transparent 27%,
+                    transparent 74%,
+                    rgba(255, 255, 255, 0.05) 75%,
+                    rgba(255, 255, 255, 0.05) 76%,
+                    transparent 77%,
+                    transparent),
+                linear-gradient(90deg,
+                    transparent 24%,
+                    rgba(255, 255, 255, 0.05) 25%,
+                    rgba(255, 255, 255, 0.05) 26%,
+                    transparent 27%,
+                    transparent 74%,
+                    rgba(255, 255, 255, 0.05) 75%,
+                    rgba(255, 255, 255, 0.05) 76%,
+                    transparent 77%,
+                    transparent);
+            background-size: 50px 50px;
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+
+        .headline-font {
+            font-family: "Space Grotesk", sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        .main-stage {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+        }
+
+        .canvas {
+            background: var(--surface);
+            border-radius: 24px;
+            box-shadow:
+                0 50px 100px -20px rgba(0, 0, 0, 0.5),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .glow-text {
+            position: relative;
+            display: inline-block;
+        }
+
+        .glow-text::after {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            filter: blur(25px);
+            opacity: 0.3;
+            color: var(--primary);
+        }
+
+        .pulse-dot {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.7;
+                transform: scale(1.1);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Scroll Animation Classes */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scroll-animate-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .scroll-animate-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scroll-animate-right {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .scroll-animate-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scroll-animate-scale {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .scroll-animate-scale.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Stagger delays */
+        .delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        .delay-4 {
+            transition-delay: 0.4s;
+        }
+
+        .delay-5 {
+            transition-delay: 0.5s;
+        }
+
+        .cta-button {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px -10px rgba(0, 90, 176, 0.5);
+        }
+
+        .feature-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px -5px rgba(0, 90, 176, 0.2);
+            border-color: rgba(0, 90, 176, 0.2);
+        }
+
+        .divider-line {
+            height: 1px;
+            background: linear-gradient(90deg,
+                    transparent 0%,
+                    rgba(229, 231, 235, 0.8) 50%,
+                    transparent 100%);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .email-link {
+            position: relative;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .email-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--primary);
+            transition: width 0.4s ease;
+        }
+
+        .email-link:hover::after {
+            width: 100%;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @media (max-width: 768px) {
+            .glow-text::after {
+                filter: blur(15px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-stage">
+        <div class="canvas w-full max-w-7xl">
+
+            <!-- Header -->
+            <header
+                class="px-8 md:px-16 py-8 flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-gray-100">
+                <div class="flex items-center fade-in">
+                    <img src="/img/logo.png" alt="Achtrex Logo" class="h-10 w-10 mr-3" />
+                </div>
+                <nav class="flex space-x-8 text-sm font-semibold tracking-wider mt-4 sm:mt-0 fade-in"
+                    style="animation-delay: 0.2s;">
+                    <a href="#" class="nav-link text-gray-700 hover:text-[var(--primary)]">HOME</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-[var(--primary)]">CONTACT</a>
+                </nav>
+            </header>
+
+            <!-- Main Content -->
+            <section class="px-8 md:px-16 py-16 md:py-24">
+                <div class="grid lg:grid-cols-5 gap-16 lg:gap-20">
+
+                    <!-- Left Column - Main Message -->
+                    <div class="lg:col-span-3">
+
+                        <!-- Status Badge -->
+                        <div class="flex items-center space-x-3 mb-8 scroll-animate">
+                            <div class="relative flex h-3 w-3">
+                                <span
+                                    class="pulse-dot absolute inline-flex h-full w-full rounded-full bg-[var(--primary)] opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-3 w-3 bg-[var(--primary)]"></span>
+                            </div>
+                            <span class="text-xs font-bold tracking-[0.2em] text-[var(--primary)] uppercase">
+                                Website Under Construction
+                            </span>
+                        </div>
+
+                        <!-- Main Headline -->
+                        <div class="scroll-animate delay-1">
+                            <h1
+                                class="text-4xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight text-gray-900 mb-6 headline-font">
+                                Empowering<br />
+                                <span class="glow-text text-[var(--primary)]" data-text="Digital Transformation">Digital
+                                    Transformation</span>
+                            </h1>
+
+                            <p class="text-3xl md:text-4xl font-bold text-gray-800 mt-8 mb-6 headline-font">
+                                Bold Ideas. Global Impact.
+                            </p>
+
+                            <p
+                                class="text-xl md:text-2xl text-gray-600 font-medium border-l-4 border-[var(--primary)] pl-6 py-2">
+                                Where Others Stop, We Go Extra Miles.
+                            </p>
+                        </div>
+
+                        <!-- Mission Statement -->
+                        <div class="mt-12 space-y-4 text-lg text-gray-700 scroll-animate delay-2">
+                            <p class="leading-relaxed">
+                                We build powerful websites, apps, and digital brands designed to scale globally. From
+                                concept to execution,
+                                Achtrex delivers solutions that transform businesses.
+                            </p>
+                            <p class="text-gray-600">
+                                Our new digital home is almost ready. While we're putting the finishing touches on our
+                                platform,
+                                we're fully operational and ready to bring your vision to life.
+                            </p>
+                        </div>
+
+                        <!-- CTA Button -->
+                        <div class="mt-12 scroll-animate delay-3">
+                            <a href="mailto:info@achtrex.com"
+                                class="cta-button inline-block px-10 py-5 text-lg font-bold text-white bg-[var(--primary)] rounded-xl shadow-2xl hover:bg-[var(--primary-dark)]">
+                                Start Your Project →
+                            </a>
+                            <p class="mt-4 text-sm text-gray-500">
+                                Let's discuss how we can elevate your digital presence
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Column - What We Do -->
+                    <div
+                        class="lg:col-span-2 border-t-2 lg:border-t-0 lg:border-l-2 border-gray-100 pt-12 lg:pt-0 lg:pl-12">
+
+                        <h3 class="text-2xl font-bold text-gray-900 mb-8 headline-font scroll-animate-right">
+                            What We Do
+                        </h3>
+
+                        <div class="space-y-6">
+
+                            <div class="feature-card bg-white rounded-xl p-6 scroll-animate-right delay-1">
+                                <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+                                    <svg class="w-6 h-6 text-[var(--primary)]" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                    </svg>
+                                </div>
+                                <h4 class="font-bold text-gray-900 mb-2">Product Development</h4>
+                                <p class="text-sm text-gray-600">End-to-end solutions from concept to launch</p>
+                            </div>
+
+                            <div class="feature-card bg-white rounded-xl p-6 scroll-animate-right delay-2">
+                                <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+                                    <svg class="w-6 h-6 text-[var(--primary)]" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                                    </svg>
+                                </div>
+                                <h4 class="font-bold text-gray-900 mb-2">UI/UX Designing</h4>
+                                <p class="text-sm text-gray-600">Intuitive interfaces that users love</p>
+                            </div>
+
+                            <div class="feature-card bg-white rounded-xl p-6 scroll-animate-right delay-3">
+                                <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+                                    <svg class="w-6 h-6 text-[var(--primary)]" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                    </svg>
+                                </div>
+                                <h4 class="font-bold text-gray-900 mb-2">SEO & Analytics</h4>
+                                <p class="text-sm text-gray-600">Data-driven strategies for maximum visibility</p>
+                            </div>
+
+                            <div class="feature-card bg-white rounded-xl p-6 scroll-animate-right delay-4">
+                                <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+                                    <svg class="w-6 h-6 text-[var(--primary)]" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                                    </svg>
+                                </div>
+                                <h4 class="font-bold text-gray-900 mb-2">System Integration</h4>
+                                <p class="text-sm text-gray-600">Seamlessly connecting your digital ecosystem</p>
+                            </div>
+
+                            <div class="feature-card bg-white rounded-xl p-6 scroll-animate-right delay-5">
+                                <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+                                    <svg class="w-6 h-6 text-[var(--primary)]" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                    </svg>
+                                </div>
+                                <h4 class="font-bold text-gray-900 mb-2">IT Consultation</h4>
+                                <p class="text-sm text-gray-600">Strategic guidance for digital transformation</p>
+                            </div>
+
+                        </div>
+
+                        <div class="mt-10 p-6 bg-gray-50 rounded-xl border border-gray-200 scroll-animate-scale">
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                <strong class="text-gray-900">Our approach:</strong> We combine cutting-edge technology
+                                with creative excellence
+                                to deliver digital solutions that don't just meet expectations, they exceed them.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <div class="divider-line mx-8 md:mx-16 scroll-animate"></div>
+
+            <!-- Contact Section -->
+            <section id="contact" class="px-8 md:px-16 py-16 md:py-20 text-center">
+                <div class="max-w-4xl mx-auto">
+
+                    <p class="text-sm font-bold tracking-[0.3em] text-gray-500 mb-6 uppercase scroll-animate">
+                        Ready to Transform Your Digital Presence?
+                    </p>
+
+                    <h3
+                        class="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-tight headline-font scroll-animate delay-1">
+                        Let's Build Something
+                        <span class="block text-[var(--primary)]">Extraordinary</span>
+                    </h3>
+
+                    <p
+                        class="text-lg md:text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed scroll-animate delay-2">
+                        While our website is under construction, our team is ready to start your project.
+                        Get in touch today and let's bring your vision to life.
+                    </p>
+
+                    <div class="mb-10 scroll-animate-scale delay-3">
+                        <a href="mailto:info@achtrex.com"
+                            class="email-link inline-flex items-center space-x-4 text-3xl md:text-4xl font-black text-[var(--primary)] hover:text-[var(--primary-dark)] transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="4" width="20" height="16" rx="2" />
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                            </svg>
+                            <span class="headline-font">info@achtrex.com</span>
+                        </a>
+                    </div>
+
+                    <p class="text-sm text-gray-500 scroll-animate delay-4">
+                        Click to send us an email and start the conversation
+                    </p>
+
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="px-8 md:px-16 py-8 border-t border-gray-100">
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 scroll-animate">
+                    <p class="mb-4 md:mb-0">© <span id="current-year"></span> Achtrex. Empowering Digital
+                        Transformation.</p>
+                    <p class="font-medium">Bold Ideas. Global Impact.</p>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <script>
+
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with scroll animation classes
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll(
+                '.scroll-animate, .scroll-animate-left, .scroll-animate-right, .scroll-animate-scale'
+            );
+
+            animatedElements.forEach(el => observer.observe(el));
+        });
+
+
+    </script>
+
+</body>
+
+</html>
